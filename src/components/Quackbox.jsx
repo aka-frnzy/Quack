@@ -13,6 +13,9 @@ const Quackbox = ({ avatar }) => {
 
     const sendQuacktoDatabase = (e) => {
         e.preventDefault();
+        if (quack === "" && quackpic === "") {
+            return
+        }
         db.collection('posts').add({
             displayName: "Yapper",
             userName: "whoisme",
