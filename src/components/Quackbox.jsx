@@ -2,6 +2,8 @@ import React from 'react'
 import { Avatar } from '@mui/material'
 import { useState } from 'react';
 import db from './Firebase';
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 const Quackbox = ({ avatar }) => {
     const [quack, setQuacks] = useState('');
     const [quackpic, setQuackPic] = useState('');
@@ -21,6 +23,7 @@ const Quackbox = ({ avatar }) => {
             userName: "whoisme",
             text: quack,
             pic: quackpic,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTiwKyEN385qsZ34nK8U0iDt5LFtEPkjvPexJElj4IAg&s"
         })
         setQuacks('');
