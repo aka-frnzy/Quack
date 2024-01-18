@@ -8,12 +8,12 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SidebarTheming from './SidebarTheming';
 
-const Sidebar = ({ image }) => {
+const Sidebar = () => {
     return (
         <>
             <div className='flex flex-col border-r-2 border-solid pl-5 pr-5'>
                 <div className='flex'>
-                    <img src={image} alt="logo" className="h-10 w-14 cursor-pointer mx-4 " />
+                    <img src="/src/assets/quack.png" alt="logo" className="h-10 w-14 cursor-pointer mx-4 " />
                     <span className='font-bold items-center justify-center'>Quacker</span>
                 </div>
                 <SidebarTheming text='Home' Icon={HomeIcon} active={true} />
