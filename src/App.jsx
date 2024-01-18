@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className='flex flex-row h-screen max-w-6xl mx-auto ' >
-        <Sidebar image="./src/assets/quack.png" />
+        <Sidebar image="../src/assets/quack.png" />
         <Feed />
         <Widget />
       </div>
