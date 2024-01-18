@@ -11,7 +11,7 @@ import SidebarTheming from './SidebarTheming';
 const Sidebar = ({ image }) => {
     return (
         <>
-            <div className='flex flex-col border-r-2 border-solid pl-5 pr-5 '>
+            <div className='flex flex-col border-r-2 border-solid pl-5 pr-5'>
                 <div className='flex'>
                     <img src={image} alt="logo" className="h-10 w-14 cursor-pointer mx-4 " />
                     <span className='font-bold items-center justify-center'>Quacker</span>
