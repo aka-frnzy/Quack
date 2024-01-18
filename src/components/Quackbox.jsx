@@ -1,12 +1,12 @@
 import React from 'react'
 import { Avatar } from '@mui/material'
-const Quackbox = () => {
+const Quackbox = ({ avatar }) => {
     return (
         <div className='border-b-4 pb-2 flex flex-col'>
             <form>
 
                 <div className='flex  '>
-                    <Avatar src="https://avatars.githubusercontent.com/u/117916707?v=4" />
+                    <Avatar src={avatar} />
                     <input className='
                     border-none w-full h-12 ml-1 p-5'
                         placeholder='Something to Quack?'
