@@ -13,7 +13,7 @@ const Sidebar = () => {
         <>
             <div className='flex flex-col border-r-2 border-solid pl-5 pr-5'>
                 <div className='flex'>
-                    <img src="/src/assets/quack.png" alt="logo" className="h-10 w-14 cursor-pointer mx-4 " />
+                    <img src="/src/assets/duck.png" alt="logo" className="h-10 w-14 cursor-pointer mx-4 rounded-full" />
                     <span className='font-bold items-center justify-center'>Quacker</span>
                 </div>
                 <SidebarTheming text='Home' Icon={HomeIcon} active={true} />
