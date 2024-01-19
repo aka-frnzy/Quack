@@ -5,11 +5,13 @@ import Post from './Post';
 import db from './Firebase'
 const Feed = ({ user, usrname }) => {
     const [posts, setPosts] = useState([])
+
     useEffect(() => {
         db.collection("posts").orderBy("createdAt", "desc").onSnapshot(snapshot => {
             setPosts(snapshot.docs.map(doc => doc.data()))
         })
     }, []);
+
     return (
         <>
             <div className='flex-1 border-r-2 border-solid overflow-auto scrollbar-hide w-fit'>
