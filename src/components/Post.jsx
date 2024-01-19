@@ -18,8 +18,8 @@ const Post = ({ avatar, displayName, userName, text, pic, createdAt }) => {
                 <div>
                     <span className='font-extrabold'>{displayName} <span className='font-light text-xs'>@{userName}</span></span>
                 </div>
-                <span className='font-extralight text-xs'>{createdAt.toDate().toString()}</span>
-                {console.log(createdAt.toDate())}
+                <span className='font-extralight text-xs'>{createdAt ? createdAt.toDate().toLocaleString() : "Getting Date"}</span>
+                {/* {console.log(createdAt.toDate())} */}
                 <div><p>{text}</p></div>
                 <img className='rounded-2xl w-full' src={pic} />
                 <div className='flex justify-between mt-3'>
