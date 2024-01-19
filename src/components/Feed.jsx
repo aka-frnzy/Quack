@@ -14,7 +14,7 @@ const Feed = ({ user, usrname }) => {
 
     return (
         <>
-            <div className='flex-1 border-r-2 border-solid overflow-auto scrollbar-hide w-fit'>
+            <div className='flex-1 border-r-2 border-solid overflow-auto scrollbar-hide w-fit max-w-full'>
 
                 <div className='sticky z-10 py-4 px-5'>
                     <Quackbox user={user} avatar={user.photoURL} usrname={usrname} />
