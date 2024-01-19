@@ -26,7 +26,7 @@ function App() {
       {user ? <div className='flex flex-row h-screen max-w-6xl mx-auto ' >
         <Sidebar auth={auth} />
         <Feed user={user} usrname={user.email.slice(0, auth.currentUser.email.indexOf("@g"))} />
-        <Widget />
+        {/* <Widget /> */}
       </div> :
         <SignIn onClick={HandleClick} />}
 
