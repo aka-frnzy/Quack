@@ -8,7 +8,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SidebarTheming from './SidebarTheming';
 
-const Sidebar = () => {
+const Sidebar = ({ auth }) => {
     return (
         <>
             <div className='flex flex-col border-r-2 border-solid pl-5 pr-5'>
@@ -27,6 +27,10 @@ const Sidebar = () => {
                 <button className=
                     ' text-slate-700 bg-yellow-400 p-3 rounded-3xl text-base w-full font-extrabold mr-2 mt-5'
                 >Quack</button>
+                <button onClick={() => auth.signOut()}
+                    className=
+                    ' text-slate-700 bg-yellow-400 p-3 rounded-3xl text-base w-full font-extrabold mr-2 mt-5'
+                >SignOut</button>
             </div>
         </>
     )

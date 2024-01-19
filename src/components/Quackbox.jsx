@@ -4,7 +4,9 @@ import { useState } from 'react';
 import db from './Firebase';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
-const Quackbox = ({ avatar }) => {
+
+
+const Quackbox = ({ avatar, user, usrname }) => {
     const [quack, setQuacks] = useState('');
     const [quackpic, setQuackPic] = useState('');
 
@@ -19,12 +21,12 @@ const Quackbox = ({ avatar }) => {
             return
         }
         db.collection('posts').add({
-            displayName: "Yapper",
-            userName: "whoisme",
+            displayName: user.displayName,
+            userName: usrname,
             text: quack,
             pic: quackpic,
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-            avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTiwKyEN385qsZ34nK8U0iDt5LFtEPkjvPexJElj4IAg&s"
+            avatar: user.photoURL
         })
         setQuacks('');
         setQuackPic('');
