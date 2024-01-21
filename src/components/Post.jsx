@@ -5,10 +5,14 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import SendIcon from '@mui/icons-material/Send';
 import RepeatIcon from '@mui/icons-material/Repeat';
-import { DragHandleOutlined } from '@mui/icons-material';
 
 const Post = ({ avatar, displayName, userName, text, pic, createdAt }) => {
     const [likes, setLikes] = useState(0)
+
+    const handleClick = () => {
+        console.log("Hello World")
+    }
+
     return (
         <div className='flex flex-start border-b-4 p-4'>
             <div>
@@ -25,7 +29,7 @@ const Post = ({ avatar, displayName, userName, text, pic, createdAt }) => {
                 <div className='flex justify-between mt-3'>
                     <ChatBubbleOutlineIcon />
                     <RepeatIcon />
-                    <button ><FavoriteBorderIcon /> {likes}</button>
+                    <button onClick={handleClick}><FavoriteBorderIcon /> {likes}</button>
                     <SendIcon />
                 </div>
             </div>
