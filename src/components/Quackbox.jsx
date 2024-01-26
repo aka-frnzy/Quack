@@ -4,7 +4,7 @@ import { useState } from 'react';
 import db from './Firebase';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
-const audio = new Audio("./src/components/quack.mp3")
+const audio = new Audio("/src/components/quack.mp3")
 
 const Quackbox = ({ avatar, user, usrname }) => {
     const [quack, setQuacks] = useState('');
