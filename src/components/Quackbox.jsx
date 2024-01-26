@@ -17,6 +17,8 @@ const Quackbox = ({ avatar, user, usrname }) => {
 
     const sendQuacktoDatabase = (e) => {
         e.preventDefault();
+
+
         if (quack === "" && quackpic === "") {
             return
         }
