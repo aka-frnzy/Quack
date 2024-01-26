@@ -4,7 +4,7 @@ import { useState } from 'react';
 import db from './Firebase';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
-
+const audio = new Audio("./src/components/quack.mp3")
 
 const Quackbox = ({ avatar, user, usrname }) => {
     const [quack, setQuacks] = useState('');
@@ -20,6 +20,7 @@ const Quackbox = ({ avatar, user, usrname }) => {
         if (quack === "" && quackpic === "") {
             return
         }
+        audio.play()
         db.collection('posts').add({
             displayName: user.displayName,
             userName: usrname,
