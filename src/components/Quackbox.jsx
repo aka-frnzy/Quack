@@ -4,7 +4,7 @@ import { useState } from 'react';
 import db from './Firebase';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
-import audioURL from '/src/components/quack.mp3'
+import audioURL from './quack.mp3'
 const audio = new Audio(audioURL)
 
 const Quackbox = ({ avatar, user, usrname }) => {
@@ -17,6 +17,7 @@ const Quackbox = ({ avatar, user, usrname }) => {
     }
 
     const sendQuacktoDatabase = (e) => {
+
         e.preventDefault();
 
 
