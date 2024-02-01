@@ -20,7 +20,7 @@ const Quackbox = ({ avatar, user, usrname }) => {
         e.preventDefault();
 
 
-        if (quack === "" && quackpic === "") {
+        if (quack.trim() === "" && quackpic.trim() === "") {
             return
         }
         audio.play()

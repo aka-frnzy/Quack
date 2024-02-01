@@ -1,7 +1,6 @@
 import Feed from './components/Feed'
 import Sidebar from './components/Sidebar';
 import SignIn from './components/SignIn';
-import Widget from './components/Widget';
 import firebase from 'firebase/compat/app';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import 'firebase/compat/auth'
@@ -26,7 +25,6 @@ function App() {
       {user ? <div className='flex flex-row h-screen max-w-6xl mx-auto ' >
         <Sidebar auth={auth} />
         <Feed user={user} usrname={user.email.slice(0, auth.currentUser.email.indexOf("@g"))} />
-        {/* <Widget /> */}
       </div> :
         <SignIn onClick={HandleClick} />}
 
