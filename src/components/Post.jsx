@@ -8,7 +8,6 @@ import RepeatIcon from '@mui/icons-material/Repeat';
 
 const Post = ({ avatar, displayName, userName, text, pic, createdAt }) => {
     const [likes, setLikes] = useState(0)
-
     const handleClick = () => {
         console.log("Hello World")
     }

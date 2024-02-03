@@ -7,6 +7,8 @@ import MessageIcon from '@mui/icons-material/Message';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SidebarTheming from './SidebarTheming';
+import { Link } from 'react-router-dom';
+
 
 const Sidebar = ({ auth }) => {
     return (
@@ -16,12 +18,12 @@ const Sidebar = ({ auth }) => {
                     <img src="https://i.postimg.cc/MHWd0jL6/quack.png" alt="logo" className="h-10 w-14 cursor-pointer mx-4 rounded-full" />
                     <span className='font-bold items-center justify-center'>Quacker</span>
                 </div>
-                <SidebarTheming text='Home' Icon={HomeIcon} active={true} />
+                <Link to='/'><SidebarTheming text='Home' Icon={HomeIcon} active={true} /></Link>
                 <SidebarTheming text='Explore' Icon={SearchIcon} />
                 <SidebarTheming text='Notifications' Icon={NotificationsIcon} />
                 <SidebarTheming text='Messages' Icon={MessageIcon} />
                 <SidebarTheming text='Bookmarks' Icon={BookmarkIcon} />
-                <SidebarTheming text='Profile' Icon={AccountCircleIcon} />
+                <Link to='/profile'><SidebarTheming text='Profile' Icon={AccountCircleIcon} /></Link>
                 <SidebarTheming text='More' Icon={MoreHorizIcon} />
 
                 <button className=
@@ -31,7 +33,7 @@ const Sidebar = ({ auth }) => {
                     className=
                     ' text-slate-700 bg-yellow-400 p-3 rounded-3xl text-base w-full font-extrabold mr-2 mt-5'
                 >SignOut</button>
-            </div>
+            </div >
         </>
     )
 }

@@ -21,7 +21,6 @@ const Feed = ({ user, usrname }) => {
                     {posts.map((post, index) => (
                         <Post
                             key={index}
-                            user={user}
                             createdAt={post.createdAt}
                             avatar={post.avatar}
                             userName={post.userName}
