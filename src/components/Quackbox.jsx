@@ -44,13 +44,13 @@ const Quackbox = ({ avatar, user, usrname }) => {
                     <Avatar src={avatar} />
                     <textarea value={quack}
                         onChange={handleinput}
-                        className='border-none outline-none w-full h-12 ml-1 p-5 scrollbar-hide'
+                        className='border-none outline-none w-full h-12 ml-1 p-5 scrollbar-hide resize-none'
                         placeholder='Something to Quack?'
                     />
                 </div>
                 <textarea value={quackpic}
                     onChange={(e) => { setQuackPic(e.target.value) }}
-                    className='ml-16 mt-2 w-3/4 outline-none scrollbar-hide'
+                    className='ml-16 mt-2 w-3/4 outline-none scrollbar-hide resize-none'
                     placeholder='Enter Image URL' />
                 <div className='flex align-middle items-end justify-end' >
                     <button className='
